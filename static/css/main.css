@@ -1,0 +1,22 @@
+.workers img{
+    width: 400px;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+div{
+    text-align: center;
+}
+
+button{
+    width: 200px;
+    height: 100px;
+}
