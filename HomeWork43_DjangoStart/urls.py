@@ -21,6 +21,10 @@ from firstapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('contacts/', views.contacts),
-    path('workers/', views.workers)
+    path('index/', views.index, name='home'),
+    path('contacts/', views.contacts, name='contacts'),
+    path('workers/', views.workers, name='workers'),
+    path('month/', views.month),
+    path('month/<str:id>', views.month, name='month'),
+    path('product/<str:id>', views.product, name='product')
 ]

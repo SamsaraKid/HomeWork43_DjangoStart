@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Наш завод</title>
-    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
 <body>
@@ -12,8 +12,15 @@
         <img src="https://belgorod.advokatservis.ru/wp-content/uploads/2021/12/ocenka-zavoda-768x576.jpg">
     </div>
     <section>
-        <a href="contacts/"><button><h3>Наши контакты</h3></button></a>
-        <a href="workers/"><button><h3>Наши сотрудники</h3></button></a>
+{#        <a href='contacts/'><button><h3>Наши контакты</h3></button></a>#}
+        <a href={% url 'contacts' %}><button><h3>Наши контакты</h3></button></a>
+        <a href={% url 'workers' %}><button><h3>Наши сотрудники</h3></button></a>
+    </section>
+    <h2>Наша продукция:</h2>
+    <section>
+        <a href={% url 'product' id=0 %}><button><h3>Сливки</h3></button></a>
+        <a href={% url 'product' id=1 %}><button><h3>Лежанки</h3></button></a>
+        <a href={% url 'product' id=2 %}><button><h3>Колбаса</h3></button></a>
     </section>
 </body>
 </html>

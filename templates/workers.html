@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Сотрудники</title>
-    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
 <body>
     <h1>Наши сотрудники</h1>
-    <section class="workers">
+    <section class="miniimg">
         <div>
             <img src="https://avatars.mds.yandex.net/get-images-cbir/2309063/XKs7__y2FwYfv7QDwDiyUA3286/ocr">
             <p>Василий Хвостович</p>
@@ -23,7 +23,10 @@
         </div>
     </section>
     <section>
-        <a href="/"><button><h3>На главную</h3></button></a>
+        <a href={% url 'home' %}><button><h3>На главную</h3></button></a>
+        <a href={% url 'month' id=0 %}><button><h3>Работник марта</h3></button></a>
+        <a href={% url 'month' id=1 %}><button><h3>Работник апреля</h3></button></a>
+        <a href={% url 'month' id=2 %}><button><h3>Работник мая</h3></button></a>
     </section>
 </body>
 </html>

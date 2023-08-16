@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Работник месяца</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <div class="miniimg">
+        <h1>Работник месяца</h1>
+        <h2>{{ kmon }}</h2>
+        <h2>{{ kwor }}</h2>
+        <img src='{% static kimg %}' alt="фото">
+    </div>
+    <section>
+        <a href={% url 'home' %}><button><h3>На главную</h3></button></a>
+        <a href={% url 'workers' %}><button><h3>Все сотрудники</h3></button></a>
+    </section>
+</body>
+</html>
